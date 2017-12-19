@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/mdtp_day_picker_selected_date_layout"
+              android:layout_width="@dimen/mdtp_date_picker_component_width"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="@color/mdtp_accent_color"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mdtp_date_picker_month_and_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:textColor="@color/mdtp_date_picker_selector">
+
+        <TextView
+            android:id="@+id/mdtp_date_picker_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:textAllCaps="true"
+            android:textColor="@color/mdtp_date_picker_selector"
+            android:textSize="@dimen/mdtp_selected_date_month_size"
+            android:textStyle="bold"
+            tools:text="May"/>
+
+        <TextView
+            android:id="@+id/mdtp_date_picker_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-16dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:textColor="@color/mdtp_date_picker_selector"
+            android:textSize="@dimen/mdtp_selected_date_day_size"
+            tools:text="15"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/mdtp_month_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_black_outline_white_back"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingBottom="2dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            tools:text="Декабрь"/>
+
+        <TextView
+            android:id="@+id/mdtp_date_picker_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_black_outline_white_back"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingBottom="2dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            tools:text="2015"/>
+
+    </LinearLayout>
+</LinearLayout>
