@@ -1,4 +1,4 @@
-# Almost-Material-Date-Picker
+# AlmostMaterialDatepicker
 
 Date picker made in material design style with some additional spinner for more convenient use.
 
