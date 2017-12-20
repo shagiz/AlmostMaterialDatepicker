@@ -11,15 +11,17 @@ To add this library to your project, you must add the JitPack repo to your root 
 allprojects {
  repositories {
     ...
-    maven { url "https://jitpack.io" }
+    jcenter()
  }
 }
 ```
 
-Then include this line in your dependencies block...
+Then include this in your dependencies block
 
 ```
-compile 'com.shagi:material-datepicker:1.0'
+implementation('com.shagi:material-datepicker:1.0') {
+        exclude group: 'com.android.support'
+    }
 ```
 
 # Usage
