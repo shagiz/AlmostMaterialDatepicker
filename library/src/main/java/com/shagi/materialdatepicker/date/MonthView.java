@@ -163,19 +163,19 @@ public abstract class MonthView extends View {
 
         boolean darkTheme = mController != null && mController.isThemeDark();
         if (darkTheme) {
-            mDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_text_normal_dark_theme);
-            mMonthDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_month_day_dark_theme);
-            mDisabledDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_text_disabled_dark_theme);
-            mHighlightedDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_text_highlighted_dark_theme);
+            mDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_text_normal_dark_theme);
+            mMonthDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_month_day_dark_theme);
+            mDisabledDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_text_disabled_dark_theme);
+            mHighlightedDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_text_highlighted_dark_theme);
         } else {
-            mDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_text_normal);
-            mMonthDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_month_day);
-            mDisabledDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_text_disabled);
-            mHighlightedDayTextColor = ContextCompat.getColor(context, R.color.mdtp_date_picker_text_highlighted);
+            mDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_text_normal);
+            mMonthDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_month_day);
+            mDisabledDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_text_disabled);
+            mHighlightedDayTextColor = ContextCompat.getColor(context, R.color.amdp_date_picker_text_highlighted);
         }
-        mSelectedDayTextColor = ContextCompat.getColor(context, R.color.mdtp_white);
+        mSelectedDayTextColor = ContextCompat.getColor(context, R.color.amdp_white);
         mTodayNumberColor = mController.getAccentColor();
-        mMonthTitleColor = ContextCompat.getColor(context, R.color.mdtp_white);
+        mMonthTitleColor = ContextCompat.getColor(context, R.color.amdp_white);
 
         mStringBuilder = new StringBuilder(50);
 

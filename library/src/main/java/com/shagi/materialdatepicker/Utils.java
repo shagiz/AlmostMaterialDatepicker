@@ -116,7 +116,7 @@ public class Utils {
             return typedValue.data;
         }
         // Return the value in mdtp_accent_color
-        return ContextCompat.getColor(context, R.color.mdtp_accent_color);
+        return ContextCompat.getColor(context, R.color.amdp_accent_color);
     }
 
     /**

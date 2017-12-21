@@ -17,43 +17,25 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <attr name="mdtp_theme_dark" format="boolean">false</attr>
 
-    <style name="mdtp_time_label">
-        <item name="android:textSize">@dimen/mdtp_time_label_size</item>
-        <item name="android:textColor">@color/mdtp_numbers_text_color</item>
-    </style>
 
-    <style name="mdtp_time_label_small" parent="mdtp_time_label">
-        <item name="android:textSize">@dimen/mdtp_time_label_subscript_size</item>
-        <item name="android:layout_marginBottom">@dimen/mdtp_time_label_shift</item>
-    </style>
-
-    <style name="mdtp_ampm_label">
-        <item name="android:textSize">@dimen/mdtp_ampm_label_size</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textColor">@color/mdtp_ampm_text_color</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="mdtp_day_of_week_label_condensed"/>
-
-    <style name="mdtp_ActionButton">
+    <style name="amdp_ActionButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/mdtp_material_button_height</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:focusable">true</item>
     </style>
 
-    <style name="mdtp_ActionButton.Text" tools:ignore="NewApi">
+    <style name="amdp_ActionButton.Text" tools:ignore="NewApi">
         <item name="android:textSize">@dimen/mdtp_material_button_textsize</item>
         <item name="android:singleLine">true</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center</item>
         <item name="android:stateListAnimator">@null</item>
-        <item name="android:background">@drawable/mdtp_material_button_background</item>
+        <item name="android:background">@drawable/amdp_material_button_background</item>
         <item name="android:minWidth">@dimen/mdtp_material_button_minwidth</item>
         <item name="android:paddingLeft">@dimen/mdtp_material_button_textpadding_horizontal</item>
         <item name="android:paddingRight">@dimen/mdtp_material_button_textpadding_horizontal</item>
-        <item name="android:textColor">@color/mdtp_button_color</item>
+        <item name="android:textColor">@color/amdp_button_color</item>
         <item name="android:textAllCaps">true</item>
     </style>
 </resources>

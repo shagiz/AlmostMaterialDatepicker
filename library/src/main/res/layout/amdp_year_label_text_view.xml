@@ -13,13 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_focused="true"
-          android:state_pressed="false"
-          android:drawable="@color/mdtp_accent_color_focused" />
-
-    <item android:state_pressed="true"
-          android:drawable="@color/mdtp_accent_color" />
-
-    <item android:drawable="@color/mdtp_white" />
-</selector>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/amdp_month_text_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mdtp_year_label_height"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textColor="@color/amdp_date_picker_year_selector"
+    android:textSize="@dimen/mdtp_day_number_select_circle_radius" />

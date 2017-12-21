@@ -131,10 +131,10 @@ public class DatePickerFragmentDialog extends DialogFragment implements
     private boolean mDismissOnPause = false;
     private boolean mAutoDismiss = false;
     private int mDefaultView = MONTH_AND_DAY_VIEW;
-    private int mOkResid = R.string.mdtp_ok;
+    private int mOkResid = R.string.amdp_ok;
     private String mOkString;
     private int mOkColor = -1;
-    private int mCancelResid = R.string.mdtp_cancel;
+    private int mCancelResid = R.string.amdp_cancel;
     private String mCancelString;
     private int mCancelColor = -1;
     private TimeZone mTimezone;
@@ -292,20 +292,20 @@ public class DatePickerFragmentDialog extends DialogFragment implements
 
         mDefaultLimiter.setController(this);
 
-        int viewRes = R.layout.mdtp_date_picker_dialog;
+        int viewRes = R.layout.amdp_date_picker_dialog;
         View view = inflater.inflate(viewRes, container, false);
         // All options have been set at this point: round the initial selection if necessary
         mCalendar = mDateRangeLimiter.setToNearestDate(mCalendar);
 
-        mArrowLeft = view.findViewById(R.id.mdtp_month_arrow_left);
-        mArrowRight = view.findViewById(R.id.mdtp_month_arrow_right);
-        mDatePickerHeaderView = view.findViewById(R.id.mdtp_date_picker_header);
-        mMonthAndDayView = view.findViewById(R.id.mdtp_date_picker_month_and_day);
+        mArrowLeft = view.findViewById(R.id.amdp_month_arrow_left);
+        mArrowRight = view.findViewById(R.id.amdp_month_arrow_right);
+        mDatePickerHeaderView = view.findViewById(R.id.amdp_date_picker_header);
+        mMonthAndDayView = view.findViewById(R.id.amdp_date_picker_month_and_day);
         mMonthAndDayView.setOnClickListener(this);
-        mSelectedMonthTextView = view.findViewById(R.id.mdtp_date_picker_month);
-        mSelectedDayTextView = view.findViewById(R.id.mdtp_date_picker_day);
-        mYearView = view.findViewById(R.id.mdtp_date_picker_year);
-        mMonthPickerView = view.findViewById(R.id.mdtp_month_picker);
+        mSelectedMonthTextView = view.findViewById(R.id.amdp_date_picker_month);
+        mSelectedDayTextView = view.findViewById(R.id.amdp_date_picker_day);
+        mYearView = view.findViewById(R.id.amdp_date_picker_year);
+        mMonthPickerView = view.findViewById(R.id.amdp_month_picker);
         mYearView.setOnClickListener(this);
         mMonthPickerView.setOnClickListener(this);
 
@@ -334,11 +334,11 @@ public class DatePickerFragmentDialog extends DialogFragment implements
         mDayPickerDescription = res.getString(R.string.mdtp_day_picker_description);
         mSelectDay = res.getString(R.string.mdtp_select_day);
 
-        int bgColorResource = mThemeDark ? R.color.mdtp_date_picker_view_animator_dark_theme : R.color.mdtp_date_picker_view_animator;
+        int bgColorResource = mThemeDark ? R.color.amdp_date_picker_view_animator_dark_theme : R.color.amdp_date_picker_view_animator;
         int bgColor = ContextCompat.getColor(activity, bgColorResource);
         view.setBackgroundColor(bgColor);
 
-        mAnimator = view.findViewById(R.id.mdtp_animator);
+        mAnimator = view.findViewById(R.id.amdp_animator);
         mAnimator.setBackgroundColor(bgColor);
         mAnimator.addView(mDayPickerView);
         mAnimator.setDateMillis(mCalendar.getTimeInMillis());
@@ -351,7 +351,7 @@ public class DatePickerFragmentDialog extends DialogFragment implements
         animation2.setDuration(ANIMATION_DURATION);
         mAnimator.setOutAnimation(animation2);
 
-        Button okButton = view.findViewById(R.id.mdtp_ok);
+        Button okButton = view.findViewById(R.id.amdp_ok);
         okButton.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -367,7 +367,7 @@ public class DatePickerFragmentDialog extends DialogFragment implements
             okButton.setText(mOkResid);
         }
 
-        Button cancelButton = view.findViewById(R.id.mdtp_cancel);
+        Button cancelButton = view.findViewById(R.id.amdp_cancel);
         cancelButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -389,7 +389,7 @@ public class DatePickerFragmentDialog extends DialogFragment implements
         if (mDatePickerHeaderView != null) {
             mDatePickerHeaderView.setBackgroundColor(Utils.darkenColor(mAccentColor));
         }
-        view.findViewById(R.id.mdtp_day_picker_selected_date_layout).setBackgroundColor(mAccentColor);
+        view.findViewById(R.id.amdp_day_picker_selected_date_layout).setBackgroundColor(mAccentColor);
 
         // Buttons can have a different color
         if (mOkColor != -1) okButton.setTextColor(mOkColor);
@@ -398,7 +398,7 @@ public class DatePickerFragmentDialog extends DialogFragment implements
         else cancelButton.setTextColor(mAccentColor);
 
         if (getDialog() == null) {
-            view.findViewById(R.id.mdtp_done_background).setVisibility(View.GONE);
+            view.findViewById(R.id.amdp_done_background).setVisibility(View.GONE);
         }
 
         updateDisplay(false);
@@ -894,11 +894,11 @@ public class DatePickerFragmentDialog extends DialogFragment implements
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.mdtp_date_picker_year) {
+        if (v.getId() == R.id.amdp_date_picker_year) {
             mYearPickerPopup.show();
-        } else if (v.getId() == R.id.mdtp_date_picker_month_and_day) {
+        } else if (v.getId() == R.id.amdp_date_picker_month_and_day) {
             setCurrentView(MONTH_AND_DAY_VIEW);
-        } else if (v.getId() == R.id.mdtp_month_picker) {
+        } else if (v.getId() == R.id.amdp_month_picker) {
             PopupMenu popupMenu = new PopupMenu(mMonthPickerView.getContext(), mMonthPickerView);
 
             Calendar calendar = Calendar.getInstance();
@@ -915,9 +915,9 @@ public class DatePickerFragmentDialog extends DialogFragment implements
                 }
             });
             popupMenu.show();
-        } else if (v.getId() == R.id.mdtp_month_arrow_left) {
+        } else if (v.getId() == R.id.amdp_month_arrow_left) {
             mDayPickerView.scrollToPrevMonth();
-        } else if (v.getId() == R.id.mdtp_month_arrow_right) {
+        } else if (v.getId() == R.id.amdp_month_arrow_right) {
             mDayPickerView.scrollToNextMonth();
         }
     }

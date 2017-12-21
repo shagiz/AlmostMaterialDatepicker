@@ -16,37 +16,37 @@
 
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/mdtp_date_picker_component_width"
-    android:layout_height="@dimen/mdtp_date_picker_view_animator_height">
+    android:layout_width="@dimen/amdp_date_picker_component_width"
+    android:layout_height="@dimen/amdp_date_picker_view_animator_height">
 
     <com.shagi.materialdatepicker.date.AccessibleDateAnimator
-        android:id="@+id/mdtp_animator"
-        android:layout_width="@dimen/mdtp_date_picker_component_width"
+        android:id="@+id/amdp_animator"
+        android:layout_width="@dimen/amdp_date_picker_component_width"
         android:layout_height="@dimen/mdtp_date_picker_view_animator_height"
         android:gravity="center"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"/>
 
     <ImageView
-        android:id="@+id/mdtp_month_arrow_left"
+        android:id="@+id/amdp_month_arrow_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
+        android:background="?selectableItemBackgroundBorderless"
         android:clickable="true"
         android:rotation="90"
-        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+        android:src="@drawable/amdp_arrow_down"
         android:focusable="true"/>
 
     <ImageView
-        android:id="@+id/mdtp_month_arrow_right"
+        android:id="@+id/amdp_month_arrow_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginTop="8dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
+        android:background="?selectableItemBackgroundBorderless"
         android:clickable="true"
         android:rotation="-90"
-        android:src="@drawable/ic_arrow_drop_down_black_24dp"
+        android:src="@drawable/amdp_arrow_down"
         android:focusable="true"/>
 </FrameLayout>
