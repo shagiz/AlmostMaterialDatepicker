@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AlmostMaterialDatepicker.iml" filepath="$PROJECT_DIR$/AlmostMaterialDatepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaterialDatePicker.iml" filepath="$PROJECT_DIR$/MaterialDatePicker.iml" />
       <module fileurl="file://C:\Work\AlmostMaterialDatepicker\MaterialDatePicker.iml" filepath="C:\Work\AlmostMaterialDatepicker\MaterialDatePicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />

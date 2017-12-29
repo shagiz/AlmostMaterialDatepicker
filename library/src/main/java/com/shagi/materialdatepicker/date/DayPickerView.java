@@ -232,12 +232,16 @@ public abstract class DayPickerView extends RecyclerView implements DatePickerFr
 
     public void scrollToNextMonth() {
         int currentPos = ((LinearLayoutManager) getLayoutManager()).findFirstCompletelyVisibleItemPosition();
-        smoothScrollToPosition(currentPos + 1);
+        if (currentPos < getAdapter().getItemCount()) {
+            smoothScrollToPosition(currentPos + 1);
+        }
     }
 
     public void scrollToPrevMonth() {
         int currentPos = ((LinearLayoutManager) getLayoutManager()).findFirstCompletelyVisibleItemPosition();
-        smoothScrollToPosition(currentPos - 1);
+        if (currentPos > 0) {
+            smoothScrollToPosition(currentPos - 1);
+        }
     }
 
     public void postSetSelection(final int position) {
