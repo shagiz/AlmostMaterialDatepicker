@@ -19,7 +19,7 @@ allprojects {
 Then include this in your dependencies block
 
 ```
-implementation('com.shagi:material-datepicker:1.2') {
+implementation('com.shagi:material-datepicker:1.3') {
         exclude group: 'com.android.support'
     }
 ```
