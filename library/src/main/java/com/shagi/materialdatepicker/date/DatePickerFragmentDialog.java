@@ -331,8 +331,8 @@ public class DatePickerFragmentDialog extends DialogFragment implements
         }
 
         Resources res = getResources();
-        mDayPickerDescription = res.getString(R.string.mdtp_day_picker_description);
-        mSelectDay = res.getString(R.string.mdtp_select_day);
+        mDayPickerDescription = res.getString(R.string.amdp_day_picker_description);
+        mSelectDay = res.getString(R.string.amdp_select_day);
 
         int bgColorResource = mThemeDark ? R.color.amdp_date_picker_view_animator_dark_theme : R.color.amdp_date_picker_view_animator;
         int bgColor = ContextCompat.getColor(activity, bgColorResource);

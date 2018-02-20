@@ -15,29 +15,32 @@
      limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/amdp_background_color">
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/amdp_background_color"
+              android:orientation="horizontal">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/amdp_date_picker_view_animator_height"
-        android:gravity="center"
-        android:orientation="horizontal" >
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="vertical" >
+        <include layout="@layout/amdp_date_picker_header_view"/>
 
-            <include layout="@layout/amdp_date_picker_header_view" />
-
-            <include layout="@layout/amdp_date_picker_selected_date" />
-        </LinearLayout>
-
-        <include layout="@layout/amdp_date_picker_view_animator" />
+        <include layout="@layout/amdp_date_picker_selected_date"/>
     </LinearLayout>
 
-    <include layout="@layout/amdp_done_button" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/amdp_date_picker_view_animator"/>
+
+        <include layout="@layout/amdp_done_button"/>
+
+    </LinearLayout>
+
 </LinearLayout>

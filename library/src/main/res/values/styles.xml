@@ -15,26 +15,26 @@
 -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
-    <attr name="mdtp_theme_dark" format="boolean">false</attr>
+    <attr name="amdp_theme_dark" format="boolean">false</attr>
 
 
     <style name="amdp_ActionButton">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/mdtp_material_button_height</item>
+        <item name="android:layout_height">@dimen/amdp_material_button_height</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:focusable">true</item>
     </style>
 
     <style name="amdp_ActionButton.Text" tools:ignore="NewApi">
-        <item name="android:textSize">@dimen/mdtp_material_button_textsize</item>
+        <item name="android:textSize">@dimen/amdp_material_button_textsize</item>
         <item name="android:singleLine">true</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:background">@drawable/amdp_material_button_background</item>
-        <item name="android:minWidth">@dimen/mdtp_material_button_minwidth</item>
-        <item name="android:paddingLeft">@dimen/mdtp_material_button_textpadding_horizontal</item>
-        <item name="android:paddingRight">@dimen/mdtp_material_button_textpadding_horizontal</item>
+        <item name="android:minWidth">@dimen/amdp_material_button_minwidth</item>
+        <item name="android:paddingLeft">@dimen/amdp_material_button_textpadding_horizontal</item>
+        <item name="android:paddingRight">@dimen/amdp_material_button_textpadding_horizontal</item>
         <item name="android:textColor">@color/amdp_button_color</item>
         <item name="android:textAllCaps">true</item>
     </style>

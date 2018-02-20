@@ -115,7 +115,7 @@ public class Utils {
         if (colorAccentResId != 0 && context.getTheme().resolveAttribute(colorAccentResId, typedValue, true)) {
             return typedValue.data;
         }
-        // Return the value in mdtp_accent_color
+        // Return the value in amdp_accent_color
         return ContextCompat.getColor(context, R.color.amdp_accent_color);
     }
 
@@ -127,7 +127,7 @@ public class Utils {
      * @return true if dark mode, false if light.
      */
     public static boolean isDarkTheme(Context context, boolean current) {
-        return resolveBoolean(context, R.attr.mdtp_theme_dark, current);
+        return resolveBoolean(context, R.attr.amdp_theme_dark, current);
     }
 
     /**

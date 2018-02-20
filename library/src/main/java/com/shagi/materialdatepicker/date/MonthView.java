@@ -158,8 +158,8 @@ public abstract class MonthView extends View {
         mDayLabelCalendar = Calendar.getInstance(mController.getTimeZone());
         mCalendar = Calendar.getInstance(mController.getTimeZone());
 
-        mDayOfWeekTypeface = res.getString(R.string.mdtp_day_of_week_label_typeface);
-        mMonthTitleTypeface = res.getString(R.string.mdtp_sans_serif);
+        mDayOfWeekTypeface = res.getString(R.string.amdp_day_of_week_label_typeface);
+        mMonthTitleTypeface = res.getString(R.string.amdp_sans_serif);
 
         boolean darkTheme = mController != null && mController.isThemeDark();
         if (darkTheme) {
@@ -179,18 +179,18 @@ public abstract class MonthView extends View {
 
         mStringBuilder = new StringBuilder(50);
 
-        MINI_DAY_NUMBER_TEXT_SIZE = res.getDimensionPixelSize(R.dimen.mdtp_day_number_size);
-        MONTH_LABEL_TEXT_SIZE = res.getDimensionPixelSize(R.dimen.mdtp_month_label_size);
-        MONTH_DAY_LABEL_TEXT_SIZE = res.getDimensionPixelSize(R.dimen.mdtp_month_day_label_text_size);
-        MONTH_HEADER_SIZE = res.getDimensionPixelOffset(R.dimen.mdtp_month_list_item_header_height);
+        MINI_DAY_NUMBER_TEXT_SIZE = res.getDimensionPixelSize(R.dimen.amdp_day_number_size);
+        MONTH_LABEL_TEXT_SIZE = res.getDimensionPixelSize(R.dimen.amdp_month_label_size);
+        MONTH_DAY_LABEL_TEXT_SIZE = res.getDimensionPixelSize(R.dimen.amdp_month_day_label_text_size);
+        MONTH_HEADER_SIZE = res.getDimensionPixelOffset(R.dimen.amdp_month_list_item_header_height);
         DAY_SELECTED_CIRCLE_SIZE = res
-                .getDimensionPixelSize(R.dimen.mdtp_day_number_select_circle_radius);
+                .getDimensionPixelSize(R.dimen.amdp_day_number_select_circle_radius);
         DAY_HIGHLIGHT_CIRCLE_SIZE = res
-                .getDimensionPixelSize(R.dimen.mdtp_day_highlight_circle_radius);
+                .getDimensionPixelSize(R.dimen.amdp_day_highlight_circle_radius);
         DAY_HIGHLIGHT_CIRCLE_MARGIN = res
-                .getDimensionPixelSize(R.dimen.mdtp_day_highlight_circle_margin);
+                .getDimensionPixelSize(R.dimen.amdp_day_highlight_circle_margin);
 
-        mRowHeight = (res.getDimensionPixelOffset(R.dimen.mdtp_date_picker_view_animator_height)
+        mRowHeight = (res.getDimensionPixelOffset(R.dimen.amdp_date_picker_view_animator_height)
                 - getMonthHeaderSize()) / MAX_NUM_ROWS;
 
         // Set up accessibility components.
@@ -393,7 +393,7 @@ public abstract class MonthView extends View {
         String pattern = "MMMM yyyy";
 
         if (Build.VERSION.SDK_INT < 18) {
-            pattern = getContext().getResources().getString(R.string.mdtp_date_v1_monthyear);
+            pattern = getContext().getResources().getString(R.string.amdp_date_v1_monthyear);
         } else {
             pattern = DateFormat.getBestDateTimePattern(locale, pattern);
         }
@@ -745,7 +745,7 @@ public abstract class MonthView extends View {
                     mTempCalendar.getTimeInMillis());
 
             if (day == mSelectedDay) {
-                return getContext().getString(R.string.mdtp_item_is_selected, date);
+                return getContext().getString(R.string.amdp_item_is_selected, date);
             }
 
             return date;

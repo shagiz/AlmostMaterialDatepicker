@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.shagi.materialdatepicker.date.DatePickerFragmentDialog
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +16,12 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             val dialog = DatePickerFragmentDialog.newInstance({ view, year, monthOfYear, dayOfMonth ->
-                Toast.makeText(applicationContext, "year $year month $monthOfYear day $dayOfMonth", Toast.LENGTH_SHORT).show()
+                val calendar = Calendar.getInstance()
+                calendar.set(year, monthOfYear, dayOfMonth)
+
+                val simpleDateFormat = SimpleDateFormat("yyyy-MMM-dd", Locale.getDefault())
+
+                Toast.makeText(applicationContext, simpleDateFormat.format(calendar.time), Toast.LENGTH_SHORT).show()
             }, 2017, 11, 4)
             dialog.show(supportFragmentManager, "tag")
         }
